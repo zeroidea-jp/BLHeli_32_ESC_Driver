@@ -7,8 +7,8 @@ ESC_PIN = 18  # GPIO pin connected to the ESC signal wire
 ESC_MIN_DUTY = 0.05  # Minimum duty cycle for the ESC
 ESC_MAX_DUTY = 0.10  # Maximum duty cycle for the ESC
 
-# Relay settings
-RELAY_PIN = 17  # GPIO pin connected to the relay
+# Relay settings (intended for raspberry pi 2/3)
+RELAY_PIN = 12  # GPIO pin connected to the relay
 
 # Initialize PWM output
 esc = PWMOutputDevice(ESC_PIN, frequency=50, initial_value=0)
@@ -16,10 +16,10 @@ esc = PWMOutputDevice(ESC_PIN, frequency=50, initial_value=0)
 # Initialize relay output
 relay = OutputDevice(RELAY_PIN, initial_value=True)
 
-# Initialize buttons
-up_button = Button(23)
-down_button = Button(24)
-quit_button = Button(25)
+# Initialize buttons (intended for raspberry pi 2/3)
+up_button = Button(21) 
+down_button = Button(20)
+quit_button = Button(16)
 
 def set_esc_duty(duty_cycle):
     esc.value = duty_cycle
