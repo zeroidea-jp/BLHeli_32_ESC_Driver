@@ -3,7 +3,7 @@ from gpiozero import PWMOutputDevice
 
 # ESC settings
 ESC_PIN = 18  # GPIO pin connected to the ESC signal wire
-ESC_MIN_DUTY = 0.06  # Minimum duty cycle for the ESC
+ESC_MIN_DUTY = 0.05  # Minimum duty cycle for the ESC
 ESC_MAX_DUTY = 0.10 #0.1   # Maximum duty cycle for the ESC # => 0.125 (or 0.13) causes strong instablities, 1.2 is stable
 
 # Initialize PWM output
